@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+
 const boxVariant = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
   hidden: { opacity: 0, x: 200 },
@@ -32,23 +32,19 @@ export default function ActionHome() {
             <div className="col-lg-12 text-center">
               <div className="scholership-promo-text">
                 <h2>
-                  {/* Demo University Provide <span>Scholarship</span> For Talented
-                  Student! */}
                   Register for Life Time Bhavans Alumni Association Membership
                 </h2>
                 <p>
                   Enable yourself to harness the power of your alumni network.
                 </p>
-                {/* <Link to="/login" className="btn btn-brand scholarBtn">
-                  Register Now
-                </Link> */}
                 <a
                   className="btn btn-brand scholarBtn"
                   href="/lifetime-registration"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Register
                 </a>
-                {/* <p>Coming Soon</p> */}
               </div>
             </div>
           </div>

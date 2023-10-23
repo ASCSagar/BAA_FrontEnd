@@ -172,7 +172,13 @@ export default function NavBar() {
                     </NavLink>
                   </li>
                   <li className="menu-item-depth-0">
-                    <a href="/lifetime-registration">Register</a>
+                    <a
+                      href="/lifetime-registration"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Register
+                    </a>
                   </li>
                   <li className="menu-item-depth-0">
                     <a href={"/baa2"} target="_blank" rel="noreferrer">
