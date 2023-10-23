@@ -10,7 +10,6 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  // console.log(action);
   return { ...state, [action.type]: action.value };
 };
 
@@ -32,9 +31,7 @@ export default function ConContact() {
       setError("Please Enter Correct email Id");
       return;
     }
-    // console.log(contactData);
     apidata("contactcreateview", "post", contactData).then((res) => {
-      // console.log(res.status);
       if (res.status === 200 || res.status === 201) {
         setAlert(true);
         dispatch({ type: "name", value: "" });
@@ -57,16 +54,6 @@ export default function ConContact() {
               <div className="col-lg-10">
                 <div className="shadow-soft roundedImg">
                   <div className="row p-4">
-                    {/* <div className="col-lg-5">
-                      <!-- Map Area Start -->
-                      <div className="map-area-wrap">
-                        <iframe
-                          src="https://snazzymaps.com/embed/75079"
-                          title="unique"></iframe>
-                      </div>
-                      <!-- Map Area End -->
-                    </div> */}
-
                     <div className="col-lg-6 m-auto">
                       <div className="contact-form-wrap">
                         <h3>Send Message</h3>
@@ -111,7 +98,6 @@ export default function ConContact() {
                               </div>
                             </div>
                           </div>
-
                           <div className="form-group">
                             <label htmlFor="cbxsubject">Subject</label>
                             <input
@@ -128,7 +114,6 @@ export default function ConContact() {
                               }
                             />
                           </div>
-
                           <div className="form-group">
                             <label htmlFor="cbxmessage">Message</label>
                             <textarea
@@ -146,21 +131,6 @@ export default function ConContact() {
                               }
                             ></textarea>
                           </div>
-                          {/* <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="cbxsendme"
-                              name="cbxsendme"
-                              value="on"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="cbxsendme">
-                              Send Me CC
-                            </label>
-                          </div> */}
-
                           <button
                             className="btn roundedImg shadowBtn mb-3 conBtn"
                             onClick={submitData}
@@ -169,7 +139,8 @@ export default function ConContact() {
                           </button>
                           {alert ? (
                             <div id="cbx-formalert">
-                              Your Data Has Been Submitted Successfully
+                              Your Enquiry Has Been Submitted Successfully ,
+                              Someone Get Will You Soon
                             </div>
                           ) : Error?.length ? (
                             <p className="dataSubRed">{Error}</p>
