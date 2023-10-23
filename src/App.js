@@ -19,16 +19,13 @@ import {
   Routes,
   BrowserRouter as Router,
   NavLink,
-  useLocation,
 } from "react-router-dom";
-import RegisterPage from "./Pages/Register/RegisterPage";
 import RightSidePage from "./Blog-Page/RightSideBar/RightSidePage";
 import LeftSidePage from "./Blog-Page/LeftSideBar/LeftSidePage";
 import NoSidePage from "./Blog-Page/NoSideBar/NoSidePage";
 import TypoPage from "./Pages/Typography/TypoPage";
 import SingleAlbPage from "./Pages/Galery/SingleAlbum/SingleAlbPage";
 import "./assets/css/custom.css";
-import DummyComp from "./DummyComp";
 import IsLoading from "./Components/Loader/IsLoading";
 import { useEffect, useState } from "react";
 import { MyContext } from "./MyContext";
@@ -55,11 +52,8 @@ function App() {
     const response = await apidata("site");
     if (response.status !== 200) {
       setError("Error Occured");
-      // console.log(response);
     }
-    // console.log(response.status);
     setSiteData(response.data);
-    // console.log(response.data);
     setLoading(false);
   };
 
@@ -82,8 +76,6 @@ function App() {
               <NavBar />
 
               <Routes>
-                {/* <Route path="/login" element={<RegisterPage />} /> */}
-                {/* <Route path="/" element={<Layout />}> */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/blog" element={<BlogPage />} />
@@ -103,16 +95,13 @@ function App() {
                 <Route path="/blog/:id" element={<Single />} />{" "}
                 <Route path="/category/:catId" element={<BlogBlog />} />
                 <Route path="/register" element={<PaymentRec />} />
-                {/* </Route> */}
               </Routes>
-              {/* <DummyComp /> */}
               <FooTer />
             </div>
             <div className="footerMobMenu">
               <ul>
                 <li>
                   <NavLink to="/gallery">
-                    {/* {siteData?.home?.menu[0]?.gallery} */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -137,13 +126,11 @@ function App() {
                 </li>
                 <li>
                   <NavLink to="/">
-                    {/* {siteData?.home?.menu[0]?.home} */}
                     <FontAwesomeIcon icon={faHouse} />
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/event">
-                    {/* {siteData?.home?.menu[0]?.event} */}
                     <FontAwesomeIcon icon={faCalendar} />
                   </NavLink>
                 </li>

@@ -1,18 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import logo from "../../assets/images/logo/Baalogo.png";
-import TopBar from "./TopBar";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { MyContext } from "../../MyContext";
 
 export default function NavBar() {
   const { siteData } = useContext(MyContext);
 
-  // console.log(siteData.home.menu);
   const sitedata = siteData.home.menu[0];
   const [click, setClick] = useState(false); // vto close open mob menu
-  const [navClick, setNavClick] = useState(false); // of no use
   const location = useLocation().pathname;
-  // console.log(location);
   function handleClick() {
     setClick((prev) => !prev);
   }
@@ -36,15 +32,7 @@ export default function NavBar() {
       windowHeight > 250 ? setStickyClass("showed") : setStickyClass("");
     }
   };
-  function handelNavClick() {
-    // if (navClick == true) {
-    //   setClick((prev) => !prev);
-    // }
-  }
-  // useEffect(() => {
-  //   // navClick ? setNavClick(false) : setNavClick(true);
-
-  // }, [location]);
+  function handelNavClick() {}
 
   return (
     <>
@@ -52,8 +40,6 @@ export default function NavBar() {
         className={`site-header header-fixed ${stickyClass}`}
         data-responsive-width="991"
       >
-        {/* <TopBar /> */}
-
         <div className="container-fluid" id="">
           <div
             className={`site-logo ${
@@ -61,12 +47,7 @@ export default function NavBar() {
             }`}
           >
             <a href="/" className="logo">
-              <img
-                src={logo}
-                alt="site logo"
-                className="main-logo"
-                // style={{ backgroundColor: "#d4efef" }}
-              />
+              <img src={logo} alt="site logo" className="main-logo" />
               <img src={logo} alt="site logo" className="logo-sticky" />
             </a>
 
@@ -78,8 +59,6 @@ export default function NavBar() {
           </div>
           <div className="header-inner">
             <nav id="site-navigation" className="main-nav">
-              {/* <!-- /.site-logo --> */}
-
               <div
                 className={` menu-wrapper main-nav-container canvas-menu-wrapper ${
                   click ? "open-menu" : ""
@@ -158,22 +137,6 @@ export default function NavBar() {
                     >
                       Blog
                     </NavLink>
-                    {/* <ul className="sub-menu">
-                      <li>
-                        <Link to="/blog">Blog List</Link>
-                      </li>
-                      <li>
-                        <Link to="/right-blog">Single Blog Right Sidebar</Link>
-                      </li>
-                      <li>
-                        <Link to="/left-blog">Single Bolg Left Sidebar</Link>
-                      </li>
-                      <li>
-                        <Link to="/nosidebar-blog">
-                          Single Blog No Sidrebar
-                        </Link>
-                      </li>
-                    </ul> */}
                   </li>
                   <li className="menu-item-depth-0">
                     <NavLink
@@ -185,35 +148,6 @@ export default function NavBar() {
                     >
                       Committee
                     </NavLink>
-
-                    {/* <ul className="sub-menu"> */}
-                    {/* <li className="has-submenu">
-                        <Link to="/gallery">Gallery</Link>
-                        <ul className="sub-menu">
-                          <li>
-                            <Link to="/gallery">Gallery</Link>
-                          </li>
-                          <li>
-                            <Link to="/single-album">Single Album</Link>
-                          </li>
-                        </ul> */}
-                    {/* </li> */}
-                    {/* <li>
-                        <Link to="/committee">Committee</Link>
-                      </li> */}
-                    {/* <li>
-                        <Link to="/directory">Directory</Link>
-                      </li>
-                      <li>
-                        <Link to="/login">Register</Link>
-                      </li> */}
-                    {/* <li>
-                        <Link to="/career">Career</Link>
-                      </li>
-                      <li>
-                        <Link to="/typography">Typography</Link>
-                      </li> */}
-                    {/* </ul> */}
                   </li>
                   <li className="menu-item-depth-0">
                     <NavLink
@@ -238,26 +172,18 @@ export default function NavBar() {
                     </NavLink>
                   </li>
                   <li className="menu-item-depth-0">
-                    {/* <NavLink
-                      onClick={handelNavClick}
-                      className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "activeClass" : ""
-                      }
-                      to="/register"
-                    >
-                      Register
-                    </NavLink> */}
                     <a href="/lifetime-registration">Register</a>
+                  </li>
+                  <li className="menu-item-depth-0">
+                    <a href={"/baa2"} target="_blank" rel="noreferrer">
+                      Login
+                    </a>
                   </li>
                 </ul>
               </div>
-              {/* <!-- /.menu-wrapper --> */}
             </nav>
-            {/* <!-- /.site-nav --> */}
           </div>
-          {/* <!-- /.header-inner --> */}
         </div>
-        {/* <!-- /.container-full --> */}
       </header>
     </>
   );

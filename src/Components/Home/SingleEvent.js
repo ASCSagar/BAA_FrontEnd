@@ -1,15 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 export default function SingleEvent({ date, title, text, image, subtext }) {
-  // console.log(subtext);
-
   const currentDate = new Date();
   const givenDate = new Date(date);
 
   // Calculate the time difference in milliseconds
   const timeDifference = givenDate - currentDate;
-  // console.log(givenDate);
   // Function to calculate the remaining time
   const calculateRemainingTime = (timeDifference) => {
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -36,9 +32,7 @@ export default function SingleEvent({ date, title, text, image, subtext }) {
   useEffect(() => {
     const interval = setInterval(() => {
       const currentDate = new Date();
-      //   const givenDate = new Date("2024-01-27");
       const timeDifference = givenDate - currentDate;
-      // console.log(timeDifference);
       setRemainingTime(calculateRemainingTime(timeDifference));
     }, 1000);
 
@@ -92,17 +86,10 @@ export default function SingleEvent({ date, title, text, image, subtext }) {
                     </a>
                   </h3>
                   <p className="paraBan">{text}</p>
-                  {/* <Link
-                    to="/login"
-                    className=" btn btn-brand btn-brand-dark"
-                    // target="_blank"
-                    // rel="noreferrer"
-                  >
-                    Register
-                  </Link> */}
                   <a
-                    className=" btn btn-brand btn-brand-dark"
-                    href="/lifetime-registration"
+                    className="btn btn-brand btn-brand-dark"
+                    href={"/lifetime-registration"}
+                    target="_blank" rel="noreferrer"
                   >
                     Register
                   </a>

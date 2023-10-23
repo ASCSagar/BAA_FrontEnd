@@ -4,11 +4,9 @@ import EventsHome from "./EventsHome";
 import AboutHome from "./AboutHome";
 import RespoHome from "./RespoHome";
 import FunFactHome from "./FunFactHome";
-import JobHome from "./JobHome";
 import GalleryHome from "./GalleryHome";
 import ActionHome from "./ActionHome";
 import BlogHome from "./BlogHome";
-import Donation from "./Donation";
 
 export default function HomePage() {
   return (
@@ -18,8 +16,6 @@ export default function HomePage() {
       <AboutHome />
       <RespoHome />
       <FunFactHome />
-      {/* <JobHome /> */}
-      {/* <Donation /> */}
       <GalleryHome />
       <ActionHome />
       <BlogHome />
