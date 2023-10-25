@@ -173,7 +173,7 @@ export default function NavBar() {
                   </li>
                   <li className="menu-item-depth-0">
                     <a
-                      href="/lifetime-registration"
+                      href="/baa2/lifetime-membership-registration"
                       target="_blank"
                       rel="noreferrer"
                     >

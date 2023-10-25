@@ -88,7 +88,7 @@ export default function SingleEvent({ date, title, text, image, subtext }) {
                   <p className="paraBan">{text}</p>
                   <a
                     className="btn btn-brand btn-brand-dark"
-                    href={"/lifetime-registration"}
+                    href={"/baa2/lifetime-membership-registration"}
                     target="_blank" rel="noreferrer"
                   >
                     Register

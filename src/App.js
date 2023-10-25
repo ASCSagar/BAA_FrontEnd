@@ -4,7 +4,6 @@ import NavBar from "./Components/Headers/NavBar";
 import HomePage from "./Components/Home/HomePage";
 import "./assets/vendors/css/bundle.css";
 import "./assets/css/style-default.css";
-
 import AboutPage from "./Components/About/AboutPage";
 import EventPage from "./Components/Event/EventPage";
 import CareerPage from "./Pages/Career/CareerPage";
@@ -13,7 +12,6 @@ import BlogPage from "./Components/Blog/BlogPage";
 import ContactPage from "./Components/Contact/ContactPage";
 import CommitePage from "./Pages/Commitee/CommitePage";
 import DirectoryPage from "./Pages/Directory/DirectoryPage";
-// import SingleEventPage from "./Single-Event/SingleEventPage";
 import {
   Route,
   Routes,
