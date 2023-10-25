@@ -12,7 +12,7 @@ function SingleGallery() {
   const getData = async function () {
     try {
       const request = await fetch(
-        `https://bhavansalumniassociation.org/api/category/images/?category_id=${param}`
+        `https://api.bhavansalumniassociation.org/api/category/images/?category_id=${param}`
       );
       if (!request.ok) {
         setIsLoading({ loading: false, err: false });

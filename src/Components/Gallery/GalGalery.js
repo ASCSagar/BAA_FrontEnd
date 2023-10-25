@@ -10,7 +10,7 @@ export default function GalGalery() {
   const getData = async function () {
     try {
       const request = await fetch(
-        "https://bhavansalumniassociation.org/api/gallerylistview"
+        "https://api.bhavansalumniassociation.org/api/gallerylistview"
       );
       if (!request.ok) {
         setIsLoading({ loading: false, err: false });

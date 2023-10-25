@@ -1,6 +1,6 @@
 import axios from "axios";
-const url = "https://bhavansalumniassociation.org";
-
+const url = "https://api.bhavansalumniassociation.org";
+// https://bhavansalumniassociation.org
 // function fetchData (endp){
 //    return axios.get(`${url}/${endp}`).then((res)=>{
 //         return res.data
