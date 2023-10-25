@@ -39,7 +39,7 @@ export default function ActionHome() {
                 </p>
                 <a
                   className="btn btn-brand scholarBtn"
-                  href="/lifetime-registration"
+                  href="/baa2/lifetime-membership-registration"
                   target="_blank"
                   rel="noreferrer"
                 >
