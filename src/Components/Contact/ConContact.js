@@ -139,8 +139,8 @@ export default function ConContact() {
                           </button>
                           {alert ? (
                             <div id="cbx-formalert">
-                              Your Enquiry Has Been Submitted Successfully ,
-                              Someone Get Will You Soon
+                              "Thank You For Submitting The Inquiry. Someone
+                              Shall Get In Touch With You Soon"
                             </div>
                           ) : Error?.length ? (
                             <p className="dataSubRed">{Error}</p>
