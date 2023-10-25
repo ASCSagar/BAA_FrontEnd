@@ -65,7 +65,7 @@ const WSPGallery = ({ galleryImages, isItHome }) => {
           />
           <div className="fullScreenImage">
             <img
-              src={`${isItHome ? "" : "https://bhavansalumniassociation.org/"}${
+              src={`${isItHome ? "" : "https://api.bhavansalumniassociation.org/"}${
                 galleryImages[slideNumber].image
               }`}
               alt=""
@@ -91,7 +91,7 @@ const WSPGallery = ({ galleryImages, isItHome }) => {
               >
                 <img
                   src={`${
-                    isItHome ? "" : "https://bhavansalumniassociation.org/"
+                    isItHome ? "" : "https://api.bhavansalumniassociation.org/"
                   }${galleryImages[index].image}`}
                   className="roundedImg"
                 />
